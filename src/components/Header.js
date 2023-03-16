@@ -4,6 +4,7 @@ import HomeSvg from "./svg/HomeSvg";
 import AboutMeSvg from "./svg/AboutMeSvg";
 import LightSvg from "./svg/LightSvg";
 import DarkSvg from "./svg/DarkSvg";
+import MenuSvg from "./svg/MenuSvg"
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -38,7 +39,12 @@ export default function Header() {
     <header className="fixed w-full dark:text-white dark:bg-slate-800 h-12 top-0 left-0 z-50 shadow-md">
       <div className="px-4 h-full max-w-screen-lg mx-auto">
         <nav className="flex justify-between h-full ">
-          <div className="flex items-center gap-4 h-full ">
+        <div className="flex md:hidden transition-colors hover:text-indigo-500">
+          <button>
+            <MenuSvg />
+          </button>
+        </div>
+          <div className="hidden md:flex items-center gap-4">
             <Link to="/">
               <div className="flex">
                 <HomeSvg />
