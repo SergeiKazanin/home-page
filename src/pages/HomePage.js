@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
 export default function HomePage() {
-  return (
-    <div>HomePage</div>
-  )
+  document.title = "Главная - SergeiKazanin Home Page";
+  return <div>HomePage</div>;
 }
