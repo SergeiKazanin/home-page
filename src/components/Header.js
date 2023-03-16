@@ -61,7 +61,7 @@ export default function Header() {
             </Link>
           </div>
           <div className="flex items-center">
-            <button onClick={handleThemeChange}>
+            <button onClick={() => handleThemeChange()}>
               {theme === "light" ? <DarkSvg /> : <LightSvg />}
             </button>
           </div>
