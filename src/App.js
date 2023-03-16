@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="flex pt-12 flex-col max-w-screen-lg items-center">
+      <header className="fixed h-12 top-0 left-0 z-50">
+        <nav>
+          <Link>О бо мне</Link>
+          <Link>Домой</Link>
+        </nav>
       </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/favourites" element={<FavouritesPage />} /> */}
+        </Routes>
+      </main>
+      <footer></footer>
     </div>
   );
 }
