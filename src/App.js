@@ -7,10 +7,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="flex pt-12 flex-col w-full h-screen justify-between font-montserrat text-xl">
+    <div className="flex pt-12 flex-col w-screen h-screen justify-between font-montserrat text-xl">
       <Header />
 
-      <main>
+      <main className="dark:bg-slate-500 dark:text-white h-full">
         <div className="px-4 max-w-screen-lg mx-auto">
           <Routes>
             <Route path="/" element={<HomePage />} />
