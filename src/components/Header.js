@@ -75,7 +75,7 @@ export default function Header() {
   }, [theme]);
 
   return (
-    <header className="fixed w-full dark:text-white dark:bg-slate-800 transition-all h-12 top-0 left-0 shadow-md">
+    <header className="fixed w-full dark:text-white bg-white dark:bg-slate-800 transition-all h-12 top-0 left-0 z-50 shadow-md">
       <Menu menuOpen={menuOpen} setMenuOpen={handleClickMenu} />
 
       <div className="px-4 h-full max-w-screen-lg mx-auto">
