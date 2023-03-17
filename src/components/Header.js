@@ -4,11 +4,46 @@ import HomeSvg from "./svg/HomeSvg";
 import AboutMeSvg from "./svg/AboutMeSvg";
 import LightSvg from "./svg/LightSvg";
 import DarkSvg from "./svg/DarkSvg";
-import MenuSvg from "./svg/MenuSvg"
+import MenuSvg from "./svg/MenuSvg";
 import { Link } from "react-router-dom";
+
+function Menu({ menuOpen, setMenuOpen }) {
+  return (
+    <div
+      onClick={setMenuOpen}
+      className={`fixed -left-2 top-12 w-screen h-screen transition-all ${
+        menuOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+    >
+      <div onClick={e => e.stopPropagation()} className="dark:bg-slate-800 bg-slate-400 w-52 h-36 text-xl shadow-md rounded-md">
+        <div className="flex flex-col justify-start gap-3 ml-2 p-4">
+          <Link to="/">
+            <div className="flex transition-colors hover:text-indigo-500">
+              <HomeSvg />
+              <span className="ml-1 font-greatvibes">Sergei Kazanin</span>
+            </div>
+          </Link>
+          <Link to="/myproject">
+            <div className="flex transition-colors hover:text-indigo-500">
+              <AcademicSvg />
+              <span className="ml-1">Мои проекты</span>
+            </div>
+          </Link>
+          <Link to="aboutme">
+            <div className="flex transition-colors hover:text-indigo-500">
+              <AboutMeSvg />
+              <span className="ml">Обо мне</span>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Header() {
   const [theme, setTheme] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleThemeChange = () => {
     if (theme === "light") {
@@ -18,6 +53,10 @@ export default function Header() {
       localStorage.theme = "light";
       setTheme("light");
     }
+  };
+
+  const handleClickMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
@@ -36,37 +75,39 @@ export default function Header() {
   }, [theme]);
 
   return (
-    <header className="fixed w-full dark:text-white dark:bg-slate-800 h-12 top-0 left-0 z-50 shadow-md">
+    <header className="fixed w-full dark:text-white dark:bg-slate-800 transition-all h-12 top-0 left-0 shadow-md">
+      <Menu menuOpen={menuOpen} setMenuOpen={handleClickMenu} />
+
       <div className="px-4 h-full max-w-screen-lg mx-auto">
         <nav className="flex justify-between h-full ">
-        <div className="flex md:hidden transition-colors hover:text-indigo-500">
-          <button>
-            <MenuSvg />
-          </button>
-        </div>
+          <div className="flex md:hidden transition-colors hover:text-indigo-500">
+            <button onClick={() => handleClickMenu()}>
+              <MenuSvg />
+            </button>
+          </div>
           <div className="hidden md:flex items-center gap-4">
             <Link to="/">
-              <div className="flex">
+              <div className="flex transition-colors hover:text-indigo-500">
                 <HomeSvg />
-                <span className="ml-1 font-greatvibes transition-colors hover:text-indigo-500 text-2xl">
+                <span className="ml-1 font-greatvibes  text-2xl">
                   Sergei Kazanin
                 </span>
               </div>
             </Link>
             <Link to="/myproject">
-              <div className="flex">
+              <div className="flex transition-colors hover:text-indigo-500">
                 <AcademicSvg />
                 <span className="ml-1">Мои проекты</span>
               </div>
             </Link>
             <Link to="aboutme">
-              <div className="flex">
+              <div className="flex transition-colors hover:text-indigo-500">
                 <AboutMeSvg />
                 <span className="ml">Обо мне</span>
               </div>
             </Link>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center transition-colors hover:text-indigo-500">
             <button onClick={() => handleThemeChange()}>
               {theme === "light" ? <DarkSvg /> : <LightSvg />}
             </button>
