@@ -29,7 +29,7 @@ function Menu({ menuOpen, setMenuOpen }) {
               <span className="ml-1">Мои проекты</span>
             </div>
           </Link>
-          <Link to="aboutme">
+          <Link to="/aboutme">
             <div className="flex transition-colors hover:text-indigo-500">
               <AboutMeSvg />
               <span className="ml">Обо мне</span>
@@ -100,7 +100,7 @@ export default function Header() {
                 <span className="ml-1">Мои проекты</span>
               </div>
             </Link>
-            <Link to="aboutme">
+            <Link to="/aboutme">
               <div className="flex transition-colors hover:text-indigo-500">
                 <AboutMeSvg />
                 <span className="ml">Обо мне</span>
