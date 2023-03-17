@@ -3,7 +3,7 @@ import React from "react";
 export default function AboutMe() {
   document.title = "Обо мне - SergeiKazanin Home Page";
   return (
-    <div className="py-4">
+    <div className="py-4 h-full">
       <h1 className="mt-3">
         {" "}
         <strong>ОБО МНЕ</strong>
