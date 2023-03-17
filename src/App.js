@@ -1,25 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import MyProjects from "./pages/MyProjects";
-import AboutMe from "./pages/AboutMe";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Main from "./components/Main";
 
 function App() {
   return (
     <div className="flex pt-12 flex-col w-screen h-screen justify-between font-montserrat text-xl">
       <Header />
-
-      <main className="dark:bg-slate-500 dark:text-white h-full">
-        <div className="px-4 max-w-screen-lg mx-auto">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/myproject" element={<MyProjects />} />
-            <Route path="/aboutme" element={<AboutMe />} />
-          </Routes>
-        </div>
-      </main>
-
+      <Main />
       <Footer />
     </div>
   );

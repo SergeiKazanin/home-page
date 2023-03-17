@@ -15,7 +15,7 @@ function Menu({ menuOpen, setMenuOpen }) {
         menuOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      <div onClick={e => e.stopPropagation()} className="dark:bg-slate-800 bg-slate-400 w-52 h-36 text-xl shadow-md rounded-md">
+      <div onClick={e => e.stopPropagation()} className="dark:bg-slate-800 bg-slate-400 w-52 h-36 shadow-md rounded-md">
         <div className="flex flex-col justify-start gap-3 ml-2 p-4">
           <Link to="/">
             <div className="flex transition-colors hover:text-indigo-500">
