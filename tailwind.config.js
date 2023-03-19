@@ -4,6 +4,16 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'selfie': "url('./components/img/selfie.jpg')",
+        'snake': "url('./components/img/snake.jpg')",
+        'co2mert': "url('./components/img/co2metr.jpg')",
+        'dictionary': "url('./components/img/dictionary.jpg')",
+        'login': "url('./components/img/login.jpg')",
+        'dictionary2': "url('./components/img/dictionary2.jpg')",
+        'test': "url('./components/img/test.jpg')",
+        'weather': "url('./components/img/weather.jpg')",
+      },
       fontFamily: {
         greatvibes: ["Great Vibes"],
         montserrat: ["Montserrat"],
