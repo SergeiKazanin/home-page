@@ -7,12 +7,11 @@ module.exports = {
       backgroundImage: {
         'selfie': "url('./components/img/selfie.jpg')",
         'snake': "url('./components/img/snake.jpg')",
-        'co2mert': "url('./components/img/co2metr.jpg')",
-        'dictionary': "url('./components/img/dictionary.jpg')",
-        'login': "url('./components/img/login.jpg')",
-        'dictionary2': "url('./components/img/dictionary2.jpg')",
-        'test': "url('./components/img/test.jpg')",
-        'weather': "url('./components/img/weather.jpg')",
+        'co2mert': "url('./components/img/co2metr.png')",
+        'dictionary': "url('./components/img/dictionary.png')",
+        'login': "url('./components/img/login.png')",
+        'test': "url('./components/img/test.png')",
+        'weather': "url('./components/img/weather.png')",
       },
       fontFamily: {
         greatvibes: ["Great Vibes"],
