@@ -14,7 +14,7 @@ export default function HomePage() {
         Занимаюсь веб разработкой. В качестве хобби разрабатывыаю электронные
         устройства на Arduino.
       </p>
-      <p className="mt-36">Мой телеграмм и гитхаб.</p>
+      <p className="mt-36">Мой телеграм и гитхаб.</p>
       <div className="flex justify-center gap-4 mt-3">
         <a
           className="transition-colors hover:scale-105"
