@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { client } from "../components/sanityClient";
+import { urlFor } from "../components/sanityClient";
+
+async function loadProjects() {
+  const query = `*[_type == "projects"]`;
+  const { projects } = await client.fetch(query);
+  return { projects };
+}
+
+const getProject = async () => {
+  const projects1 = await loadProjects();
+  console.log(projects1);
+};
 
 export default function MyProjects() {
   document.title = "Мои проекты - SergeiKazanin Home Page";
-
+  getProject()
   const projects = [
     {
       bgImg: "bg-dictionary",
@@ -65,7 +78,6 @@ export default function MyProjects() {
             >
               Открыть проект
             </a>
-
             <a
               className="my-2 flex items-center justify-center rounded-3xl hover:shadow-lg shadow-md w-3/4 h-10 dark:bg-indigo-800
                          dark:hover:bg-indigo-900 bg-indigo-300 hover:bg-indigo-400 transition-colors"
@@ -80,6 +92,7 @@ export default function MyProjects() {
       </div>
     );
   };
+
   return (
     <div className="py-4 text-center">
       <h1>МОИ ПРОЕКТЫ</h1>
