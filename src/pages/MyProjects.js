@@ -29,7 +29,8 @@ export default function MyProjects() {
     {
       bgImg: "bg-co2mert",
       descriptions: "Измеритель углекислого газа и PM 2.5 частиц в воздухе",
-      linkProtect: "https://user-images.githubusercontent.com/105712313/226246619-9f593c82-dd07-454e-be16-b56687b1508d.jpg",
+      linkProtect:
+        "https://user-images.githubusercontent.com/105712313/226246619-9f593c82-dd07-454e-be16-b56687b1508d.jpg",
       linkGitHab: "https://github.com/SergeiKazanin/carbon-dioxide-meter",
     },
     {

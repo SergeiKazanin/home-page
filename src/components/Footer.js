@@ -10,7 +10,7 @@ export default function Footer() {
           @{new Date().getFullYear()} Дизайн и разработка{" "}
           <Link className="underline" to="/aboutme">
             Сергей&nbsp;Казанин
-          </Link>{" "}
+          </Link>
         </p>
       </div>
     </footer>
