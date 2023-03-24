@@ -48,21 +48,15 @@ export default function MyProjects() {
   //   },
   // ];
 
-  const Card = ({ project }) => {
-    let imgLink = project.poster.asset._ref;
-    let imgArr = imgLink.split("-");
-
-    imgLink = imgArr[1] + "-" + imgArr[2] + "." + imgArr[3];
-    console.log(imgLink);
+  const Card = ({ project }) =>{ 
+    const imgArr = project.poster.asset._ref.split("-");
+    const imgLink = imgArr[1] + "-" + imgArr[2] + "." + imgArr[3];
     const img = `https://cdn.sanity.io/images/94p50dfz/production/${imgLink}`;
 
     return (
       <div className="w-[20rem] flex flex-col overflow-hidden border dark:border-none rounded-2xl shadow-md">
-        <div
-          className={`w-full bg-cover bg-no-repeat dark:bg-slate-600 bg-center pb-[78%] ${img}`}
-        >
-          <img src={img} alt="ss"></img>
-        </div>
+        <img src={img} alt={project.poster.caption}></img>
+
         <div className="p-2 flex flex-1 flex-col  items-center dark:bg-slate-600 border-t  dark:border-slate-500">
           <p className="">{project.descriptions}</p>
           <div className="w-full flex flex-1 flex-col items-center justify-end">
@@ -95,7 +89,6 @@ export default function MyProjects() {
     isFetching,
     data = [],
   } = useGetProjectQuery(`*[_type == "projects"]`);
-  console.log(isFetching);
 
   if (isFetching) {
     return <h2 className="text-4xl">Loading</h2>;
@@ -105,7 +98,6 @@ export default function MyProjects() {
     return <h2 className="text-4xl">Error</h2>;
   } else {
     projects = data.result;
-    console.log(projects);
   }
 
   if (!isError && projects?.length) {
@@ -117,7 +109,7 @@ export default function MyProjects() {
         </p>
         <div className="flex flex-wrap gap-4 mt-8">
           {projects.map((project) => (
-            <Card key={project.bgImg} project={project} />
+            <Card key={project.poster.asset._ref} project={project} />
           ))}
         </div>
       </div>
