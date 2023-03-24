@@ -107,7 +107,7 @@ export default function MyProjects() {
         <p className="mt-3">
           Приложения разработанные для обучнения и просто по фану.
         </p>
-        <div className="flex flex-wrap gap-4 mt-8">
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
           {projects.map((project) => (
             <Card key={project.poster.asset._ref} project={project} />
           ))}
