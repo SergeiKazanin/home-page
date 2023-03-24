@@ -1,3 +1,3 @@
-https://home-page-neon-delta.vercel.app/
+https://home-page-snowy-two.vercel.app/
 
 Домашня страница, на react, tailwind CSS, react router
