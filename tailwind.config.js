@@ -6,12 +6,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'selfie': "url('./components/img/selfie.jpg')",
-        'snake': "url('./components/img/snake.jpg')",
-        'co2mert': "url('./components/img/co2metr.jpg')",
-        'dictionary': "url('./components/img/dictionary.jpg')",
-        'login': "url('./components/img/login.jpg')",
-        'test': "url('./components/img/test.jpg')",
-        'weather': "url('./components/img/weather.jpg')",
       },
       fontFamily: {
         greatvibes: ["Great Vibes"],
