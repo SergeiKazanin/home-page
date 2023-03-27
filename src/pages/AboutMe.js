@@ -18,7 +18,7 @@ export default function AboutMe() {
       <ul className="mt-3 flex flex-wrap gap-2">
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">HTML</li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          CSS, SCSS, Tailwind CSS, Material UI
+          CSS, SCSS, Tailwind CSS, Material UI, Bootstrap
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
           JavaScript
