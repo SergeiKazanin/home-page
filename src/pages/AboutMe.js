@@ -24,7 +24,7 @@ export default function AboutMe() {
           JavaScript
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          ReactJs, Redux, Redux Toolkit, RTK Query
+          ReactJs, Redux, Redux Toolkit, RTK Query, React Router
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
           NodeJs, Express
