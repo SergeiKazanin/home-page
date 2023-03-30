@@ -10,7 +10,7 @@ export default function MyProjects() {
     isError,
     isFetching,
     data = [],
-  } = useGetProjectQuery(`*[_type == "projects"]`);
+  } = useGetProjectQuery(`*[_type == "projects"] | order(numberList)`);
 
   if (isFetching) {
     return (
