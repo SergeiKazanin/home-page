@@ -17,29 +17,41 @@ function Menu({ menuOpen, setMenuOpen }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="dark:bg-slate-800 bg-slate-400 w-52 h-36 shadow-md rounded-md"
+        className="dark:bg-slate-800 bg-slate-400 w-80 h-52 shadow-md rounded-md"
       >
-        <div className="flex flex-col justify-start gap-2 ml-2 p-4">
-          <Link to="/">
-            <div className="flex transition-colors hover:text-indigo-500">
-              <HomeSvg />
-              <span className="ml-1 text-2xl font-greatvibes">
+        <div className="flex flex-col justify-start gap-6  p-6">
+          <div className="flex items-center">
+            <Link
+              className="transition-colors hover:text-indigo-500 flex items-center"
+              onClick={setMenuOpen}
+              to="/"
+            >
+              <HomeSvg className="w-10 h-10" />
+              <span className="ml-2 text-4xl font-greatvibes">
                 Sergei Kazanin
               </span>
-            </div>
-          </Link>
-          <Link to="/myproject">
-            <div className="flex transition-colors hover:text-indigo-500">
+            </Link>
+          </div>
+          <div className="flex items-center">
+            <Link
+              className="transition-colors hover:text-indigo-500 flex items-center"
+              onClick={setMenuOpen}
+              to="/myproject"
+            >
               <AcademicSvg />
-              <span className="ml-1">Мои проекты</span>
-            </div>
-          </Link>
-          <Link to="/aboutme">
-            <div className="flex transition-colors hover:text-indigo-500">
+              <span className="ml-2 text-3xl">Мои проекты</span>
+            </Link>
+          </div>
+          <div className="flex items-center">
+            <Link
+              className="transition-colors hover:text-indigo-500 flex items-center"
+              onClick={setMenuOpen}
+              to="/aboutme"
+            >
               <AboutMeSvg />
-              <span className="ml">Обо мне</span>
-            </div>
-          </Link>
+              <span className="ml-2 text-3xl">Обо мне</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -108,7 +120,7 @@ export default function Header() {
             <Link to="/aboutme">
               <div className="flex transition-colors hover:text-indigo-500">
                 <AboutMeSvg />
-                <span className="ml">Обо мне</span>
+                <span className="ml-1">Обо мне</span>
               </div>
             </Link>
           </div>
