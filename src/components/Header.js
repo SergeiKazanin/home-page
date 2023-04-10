@@ -5,7 +5,7 @@ import AboutMeSvg from "./svg/AboutMeSvg";
 import LightSvg from "./svg/LightSvg";
 import DarkSvg from "./svg/DarkSvg";
 import MenuSvg from "./svg/MenuSvg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Menu({ menuOpen, setMenuOpen }) {
   return (
@@ -21,7 +21,7 @@ function Menu({ menuOpen, setMenuOpen }) {
       >
         <div className="flex flex-col justify-start gap-6  p-6">
           <div className="flex items-center">
-            <Link
+            <NavLink
               className="transition-colors hover:text-indigo-500 flex items-center"
               onClick={setMenuOpen}
               to="/"
@@ -30,27 +30,27 @@ function Menu({ menuOpen, setMenuOpen }) {
               <span className="ml-2 text-4xl font-greatvibes">
                 Sergei Kazanin
               </span>
-            </Link>
+            </NavLink>
           </div>
           <div className="flex items-center">
-            <Link
+            <NavLink
               className="transition-colors hover:text-indigo-500 flex items-center"
               onClick={setMenuOpen}
               to="/myproject"
             >
               <AcademicSvg />
               <span className="ml-2 text-3xl">Мои проекты</span>
-            </Link>
+            </NavLink>
           </div>
           <div className="flex items-center">
-            <Link
+            <NavLink
               className="transition-colors hover:text-indigo-500 flex items-center"
               onClick={setMenuOpen}
               to="/aboutme"
             >
               <AboutMeSvg />
               <span className="ml-2 text-3xl">Обо мне</span>
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -103,29 +103,32 @@ export default function Header() {
             </button>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/">
+            <NavLink to="/">
               <div className="flex transition-colors hover:text-indigo-500">
                 <HomeSvg />
                 <span className="ml-1 font-greatvibes  text-2xl">
                   Sergei Kazanin
                 </span>
               </div>
-            </Link>
-            <Link to="/myproject">
+            </NavLink>
+            <NavLink to="/myproject">
               <div className="flex transition-colors hover:text-indigo-500">
                 <AcademicSvg />
                 <span className="ml-1">Мои проекты</span>
               </div>
-            </Link>
-            <Link to="/aboutme">
+            </NavLink>
+            <NavLink to="/aboutme">
               <div className="flex transition-colors hover:text-indigo-500">
                 <AboutMeSvg />
                 <span className="ml-1">Обо мне</span>
               </div>
-            </Link>
+            </NavLink>
           </div>
-          <div className="flex items-center transition-colors hover:text-indigo-500">
-            <button onClick={() => handleThemeChange()}>
+          <div className="flex items-center ">
+            <button
+              className="transition-colors hover:text-indigo-500"
+              onClick={() => handleThemeChange()}
+            >
               {theme === "light" ? <DarkSvg /> : <LightSvg />}
             </button>
           </div>

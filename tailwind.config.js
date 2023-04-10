@@ -1,29 +1,40 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       backgroundImage: {
-        'selfie': "url('./components/img/selfie.jpg')",
+        selfie: "url('./components/img/selfie.jpg')",
       },
       fontFamily: {
         greatvibes: ["Great Vibes"],
         montserrat: ["Montserrat"],
       },
       screens: {
-        'sm': '640px',
+        sm: "640px",
         // => @media (min-width: 640px) { ... }
-        'md': '768px',
+        md: "768px",
         // => @media (min-width: 768px) { ... }
-        'lg': '1024px',
+        lg: "1024px",
         // => @media (min-width: 1024px) { ... }
-        'xl': '1280px',
+        xl: "1280px",
         // => @media (min-width: 1280px) { ... }
-        '2xl': '1536px',
+        "2xl": "1536px",
         // => @media (min-width: 1536px) { ... }
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".active": {
+          color: "#F87171",
+        },
+      });
+    }),
+  ],
+};
