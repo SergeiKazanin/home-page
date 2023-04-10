@@ -12,7 +12,6 @@ export default function Footer() {
             Сергей&nbsp;Казанин
           </Link>
         </p>
-        <p className="active hidden"></p>
       </div>
     </footer>
   );

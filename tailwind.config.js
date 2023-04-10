@@ -28,13 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    plugin(function ({ addComponents }) {
-      addComponents({
-        ".active": {
-          color: "#F87171",
-        },
-      });
-    }),
-  ],
+  plugins: [],
 };

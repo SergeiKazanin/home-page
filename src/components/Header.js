@@ -25,6 +25,9 @@ function Menu({ menuOpen, setMenuOpen }) {
               className="transition-colors hover:text-indigo-500 flex items-center"
               onClick={setMenuOpen}
               to="/"
+              style={({ isActive }) => ({
+                color: isActive ? "#6366F1" : "inherit",
+              })}
             >
               <HomeSvg className="w-10 h-10" />
               <span className="ml-2 text-4xl font-greatvibes">
@@ -37,6 +40,9 @@ function Menu({ menuOpen, setMenuOpen }) {
               className="transition-colors hover:text-indigo-500 flex items-center"
               onClick={setMenuOpen}
               to="/myproject"
+              style={({ isActive }) => ({
+                color: isActive ? "#6366F1" : "inherit",
+              })}
             >
               <AcademicSvg />
               <span className="ml-2 text-3xl">Мои проекты</span>
@@ -47,6 +53,9 @@ function Menu({ menuOpen, setMenuOpen }) {
               className="transition-colors hover:text-indigo-500 flex items-center"
               onClick={setMenuOpen}
               to="/aboutme"
+              style={({ isActive }) => ({
+                color: isActive ? "#6366F1" : "inherit",
+              })}
             >
               <AboutMeSvg />
               <span className="ml-2 text-3xl">Обо мне</span>
@@ -103,7 +112,12 @@ export default function Header() {
             </button>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <NavLink to="/">
+            <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                color: isActive ? "#6366F1" : "inherit",
+              })}
+            >
               <div className="flex transition-colors hover:text-indigo-500">
                 <HomeSvg />
                 <span className="ml-1 font-greatvibes  text-2xl">
@@ -111,13 +125,23 @@ export default function Header() {
                 </span>
               </div>
             </NavLink>
-            <NavLink to="/myproject">
+            <NavLink
+              to="/myproject"
+              style={({ isActive }) => ({
+                color: isActive ? "#6366F1" : "inherit",
+              })}
+            >
               <div className="flex transition-colors hover:text-indigo-500">
                 <AcademicSvg />
                 <span className="ml-1">Мои проекты</span>
               </div>
             </NavLink>
-            <NavLink to="/aboutme">
+            <NavLink
+              to="/aboutme"
+              style={({ isActive }) => ({
+                color: isActive ? "#6366F1" : "inherit",
+              })}
+            >
               <div className="flex transition-colors hover:text-indigo-500">
                 <AboutMeSvg />
                 <span className="ml-1">Обо мне</span>
