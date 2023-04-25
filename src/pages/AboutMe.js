@@ -16,15 +16,18 @@ export default function AboutMe() {
         <strong>НАВЫКИ</strong>
       </h1>
       <ul className="mt-3 flex flex-wrap gap-2">
-        <li className="rounded-2xl  text-white bg-indigo-600 px-2">HTML</li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          CSS, SCSS, Tailwind CSS, Material UI, Bootstrap
+          ReactJs, Redux, Redux Toolkit, RTK Query, React Router
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
           JavaScript
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          ReactJs, Redux, Redux Toolkit, RTK Query, React Router
+          TypeScript
+        </li>
+        <li className="rounded-2xl  text-white bg-indigo-600 px-2">HTML</li>
+        <li className="rounded-2xl  text-white bg-indigo-600 px-2">
+          CSS, SCSS, Tailwind CSS, Material UI, Bootstrap
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
           NodeJs, Express

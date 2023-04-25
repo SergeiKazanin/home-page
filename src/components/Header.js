@@ -29,7 +29,7 @@ function Menu({ menuOpen, setMenuOpen }) {
                 color: isActive ? "#6366F1" : "inherit",
               })}
             >
-              <HomeSvg className="w-10 h-10" />
+              <HomeSvg />
               <span className="ml-2 text-4xl font-greatvibes">
                 Sergei Kazanin
               </span>
