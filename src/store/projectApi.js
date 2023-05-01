@@ -5,6 +5,7 @@ export const projectApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://94p50dfz.api.sanity.io/v2021-10-21/data/query/",
   }),
+  refetchOnFocus: true,
   endpoints: (builder) => ({
     getProject: builder.query({
       query: (query) => `production?query=${query}`,
