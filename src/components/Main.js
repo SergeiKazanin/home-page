@@ -1,8 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import MyProjects from "../pages/MyProjects";
-import AboutMe from "../pages/AboutMe";
+import { lazy } from "react";
+// import HomePage from "../pages/HomePage";
+// import MyProjects from "../pages/MyProjects";
+// import AboutMe from "../pages/AboutMe";
+const HomePage = lazy(() => import("../pages/HomePage"));
+const MyProjects = lazy(() => import("../pages/MyProjects"));
+const AboutMe = lazy(() => import("../pages/AboutMe"));
 
 export default function Main() {
   return (

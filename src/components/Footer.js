@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="px-4 max-w-screen-lg mx-auto py-8">
         <h3 className="mb-3">Sergei Kazanin Home Page</h3>
         <p>
-          @{new Date().getFullYear()} Дизайн и разработка{" "}
+          {new Date().getFullYear()} Дизайн и разработка
           <Link className="underline" to="/aboutme">
             Сергей&nbsp;Казанин
           </Link>
