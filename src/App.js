@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 function App() {
   return (
-    <div className="flex pt-12 flex-col w-full h-screen font-montserrat text-xl">
+    <div className="flex pt-12 flex-col w-full min-h-screen font-montserrat text-xl">
       <Header />
       <Suspense
         fallback={
