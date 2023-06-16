@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Suspense
         fallback={
-          <p className="text-3xl flex justify-center dark:bg-slate-500 flex-1 transition-all dark:text-white">
+          <p className="text-4xl flex justify-center dark:bg-slate-500 flex-1 transition-all dark:text-white">
             Loading...
           </p>
         }
