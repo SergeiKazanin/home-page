@@ -10,7 +10,7 @@ export default function MyProjects() {
     isError,
     isFetching,
     data = [],
-  } = useGetProjectQuery(`*[_type == "projects"] | order(numberList)`, {
+  } = useGetProjectQuery(`*[_type == "projects"] | order(_createdAt desc)`, {
     refetchOnFocus: true,
   });
 
