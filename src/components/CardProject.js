@@ -35,7 +35,7 @@ export default function CardProject({ project }) {
         className={loadImg ? "" : "hidden"}
       ></img>
       <div className="p-2 flex flex-1 flex-col  items-center dark:bg-slate-600 border-t  dark:border-slate-500">
-        <p className="">{project.description}</p>
+        <p className="text-left">{project.description}</p>
         <div className="w-full flex flex-1 flex-col items-center justify-end">
           <a
             className="mt-2 flex items-center justify-center rounded-3xl hover:shadow-lg shadow-md w-3/4 h-10 dark:bg-indigo-800
