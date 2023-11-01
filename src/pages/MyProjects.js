@@ -1,15 +1,18 @@
 import Skeleton from "@mui/material/Skeleton";
 import CardProject from "../components/CardProject";
+import axios from "axios";
+import { useLoaderData } from "react-router";
 
+export async function getProjects() {
+  const { data } = await axios.get(
+    `*[_type == "projects"] | order(_createdAt desc)`
+  );
+  return data;
+}
 export default function MyProjects() {
   document.title = "Мои проекты - SergeiKazanin Home Page";
 
-  let projects = [];
-  // const {
-  //   isError,
-  //   isFetching,
-  //   data = [],
-  // } = useGetProjectQuery(`*[_type == "projects"] | order(_createdAt desc)`);
+  let projects = useLoaderData();
 
   if (0) {
     return (

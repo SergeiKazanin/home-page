@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./pages/Layout";
 import { lazy } from "react";
 import ErrorPage from "./pages/Error-page";
+import { getProjects } from "./pages/MyProjects";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const MyProjects = lazy(() => import("./pages/MyProjects"));
 const AboutMe = lazy(() => import("./pages/AboutMe"));
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/myproject",
         element: <MyProjects />,
+        loader: getProjects,
       },
       {
         path: "/aboutme",
