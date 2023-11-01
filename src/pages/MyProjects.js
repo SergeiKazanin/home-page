@@ -1,43 +1,20 @@
-import { useGetProjectQuery } from "../store/projectApi";
-import Skeleton from "@mui/material/Skeleton";
 import CardProject from "../components/CardProject";
+import axios from "axios";
+import { useLoaderData } from "react-router";
 
+export async function getProjects() {
+  const { data } = await axios.get(
+    `https://94p50dfz.api.sanity.io/v2021-10-21/data/query/production?query=*[_type == "projects"] | order(_createdAt desc)`
+  );
+
+  return data.result;
+}
 export default function MyProjects() {
   document.title = "Мои проекты - SergeiKazanin Home Page";
 
-  let projects = [];
-  const {
-    isError,
-    isFetching,
-    data = [],
-  } = useGetProjectQuery(`*[_type == "projects"] | order(_createdAt desc)`);
+  let projects = useLoaderData();
 
-  if (isFetching) {
-    return (
-      <div className="py-4 text-center">
-        <h1>МОИ ПРОЕКТЫ</h1>
-        <p className="mt-3">
-          Приложения разработанные для обучнения и просто по фану.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <Skeleton variant="rounded" width={320} height={470} />
-          <Skeleton variant="rounded" width={320} height={470} />
-          <Skeleton variant="rounded" width={320} height={470} />
-          <Skeleton variant="rounded" width={320} height={470} />
-          <Skeleton variant="rounded" width={320} height={470} />
-          <Skeleton variant="rounded" width={320} height={470} />
-        </div>
-      </div>
-    );
-  }
-
-  if (isError) {
-    return <h2 className="text-4xl text-center">Error</h2>;
-  } else {
-    projects = data.result;
-  }
-
-  if (!isError && projects?.length) {
+  if (projects?.length) {
     return (
       <div className="py-4 text-center">
         <h1>МОИ ПРОЕКТЫ</h1>
