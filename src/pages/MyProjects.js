@@ -1,4 +1,3 @@
-import { useGetProjectQuery } from "../store/projectApi";
 import Skeleton from "@mui/material/Skeleton";
 import CardProject from "../components/CardProject";
 
@@ -6,13 +5,13 @@ export default function MyProjects() {
   document.title = "Мои проекты - SergeiKazanin Home Page";
 
   let projects = [];
-  const {
-    isError,
-    isFetching,
-    data = [],
-  } = useGetProjectQuery(`*[_type == "projects"] | order(_createdAt desc)`);
+  // const {
+  //   isError,
+  //   isFetching,
+  //   data = [],
+  // } = useGetProjectQuery(`*[_type == "projects"] | order(_createdAt desc)`);
 
-  if (isFetching) {
+  if (0) {
     return (
       <div className="py-4 text-center">
         <h1>МОИ ПРОЕКТЫ</h1>
@@ -31,13 +30,7 @@ export default function MyProjects() {
     );
   }
 
-  if (isError) {
-    return <h2 className="text-4xl text-center">Error</h2>;
-  } else {
-    projects = data.result;
-  }
-
-  if (!isError && projects?.length) {
+  if (!0 && projects?.length) {
     return (
       <div className="py-4 text-center">
         <h1>МОИ ПРОЕКТЫ</h1>

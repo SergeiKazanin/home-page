@@ -9,7 +9,10 @@ export default function Footer() {
         <p>
           {new Date().getFullYear()}
           <span> Дизайн и разработка </span>
-          <Link className="underline" to="/aboutme">
+          <Link
+            className="underline hover:text-indigo-500 transition-colors"
+            to="/aboutme"
+          >
             Сергей&nbsp;Казанин
           </Link>
         </p>

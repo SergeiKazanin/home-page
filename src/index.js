@@ -1,18 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
 import "./index.css";
-import { store } from "./store/store";
-import { Provider } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./pages/Layout";
+import { lazy } from "react";
+import ErrorPage from "./pages/Error-page";
+const HomePage = lazy(() => import("./pages/HomePage"));
+const MyProjects = lazy(() => import("./pages/MyProjects"));
+const AboutMe = lazy(() => import("./pages/AboutMe"));
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <HomePage /> },
+      {
+        path: "/myproject",
+        element: <MyProjects />,
+      },
+      {
+        path: "/aboutme",
+        element: <AboutMe />,
+      },
+    ],
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+root.render(<RouterProvider router={router} />);
