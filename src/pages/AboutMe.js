@@ -17,7 +17,7 @@ export default function AboutMe() {
       </h1>
       <ul className="mt-3 flex flex-wrap gap-2">
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          ReactJs, Redux, Redux Toolkit, RTK Query, React Router
+          React, Redux, Redux Toolkit, RTK Query, React Router
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
           JavaScript
@@ -30,8 +30,9 @@ export default function AboutMe() {
           CSS, SCSS, Tailwind CSS, Material UI, Bootstrap
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          NodeJs, Express
+          Node, Express
         </li>
+        <li className="rounded-2xl  text-white bg-indigo-600 px-2">Next</li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">GitHub</li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">Figma</li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
