@@ -17,7 +17,8 @@ export default function AboutMe() {
       </h1>
       <ul className="mt-3 flex flex-wrap gap-2">
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
-          React, Redux, Redux Toolkit, RTK Query, React Router
+          React, Redux, Redux Toolkit, RTK Query, React Router, Zustand, React
+          query, Axios, Formik, React hook form
         </li>
         <li className="rounded-2xl  text-white bg-indigo-600 px-2">
           JavaScript
