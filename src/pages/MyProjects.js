@@ -1,14 +1,6 @@
 import CardProject from "../components/CardProject";
-import axios from "axios";
 import { useLoaderData } from "react-router";
 
-export async function getProjects() {
-  const { data } = await axios.get(
-    `https://94p50dfz.api.sanity.io/v2021-10-21/data/query/production?query=*[_type == "projects"] | order(_createdAt desc)`
-  );
-
-  return data.result;
-}
 export default function MyProjects() {
   document.title = "Мои проекты - SergeiKazanin Home Page";
 
